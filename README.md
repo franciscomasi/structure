@@ -1,35 +1,21 @@
-Benprof - Web institucional
-========================
+# Structure
 
-Este repositorio contiene el código generado para la realización de la web institucional de Benprof
+Structure es un proyecto de desarrollo de una estructura base para la generación de nuevas aplicaciones web, evitando repetir tareas comunes a la mayoría de los desarrollos de aplicaciones web.
 
+Características:
+  * Administración de usuarios, grupos y roles con FOSUserBundle
+  * Componentes de panel de administración backend con AdminLTE
+  * Gestión de dependencias dividido en frontend y backend
+  * Estructura de sistema dividida en frotend y backend
 
-Ramas a utilizar en el proyecto
---------------------------------
+## Documentación:
 
-Utilizaremos las ramas:
+En desarrollo
 
-  * Master: versión de producción (sólo se debe hacer merge cuando se genera un nuevo release);
+## Instalación
 
-  * Development: versión de desarrollo (utilizar esta rama para el desarrollo de funcionalidades);
+Todas las instrucciones de instalación se encuentran en la documentación.
 
+## Licencia
 
-Qué contiene?
---------------
-
-Symfony Standard Edition v3.3.5 con la configuración por defecto:
-
-  * AppBundle: bundle donde se generará la web (no hace falta crear un namespace especial);
-
-  * Twig: motor de plantillas;
-
-  * Doctrine ORM/DBAL;
-
-  * Swiftmailer;
-
-  * Annotations habilitadas (usamos esto para las relaciones directo en los modelos y.
-
-Bundles que utilizamos (vendors)
----------------------------------
-
-
+Este desarrollo está bajo licencia MIT
