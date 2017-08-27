@@ -1,0 +1,8 @@
+frontend:
+    resource: "@AppBundle/Resources/config/frontend/routing.yml"
+    prefix:   /
+backend:
+    resource: "@AppBundle/Resources/config/backend/routing.yml"
+    prefix:   /backend
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

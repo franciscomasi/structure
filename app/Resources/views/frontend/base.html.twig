@@ -1,0 +1,13 @@
+{% extends '@FOSUser/layout.html.twig' %}
+
+{% block stylesheets %}{% endblock %}
+{% block wrapper %}
+  <body>
+    {% block header %}{% endblock %}
+    {% block content_wrapper %}
+      {% block fos_user_content %}{% endblock %}
+    {% endblock %}
+    {% block footer %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+  </body>
+{% endblock %}

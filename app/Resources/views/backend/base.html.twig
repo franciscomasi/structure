@@ -1,0 +1,58 @@
+{% extends '@FOSUser/layout.html.twig' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('assets/vendor/AdminLTE/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/AdminLTE/dist/css/AdminLTE.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/AdminLTE/dist/css/skins/skin-blue.min.css') }}">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+{% endblock %}
+{% block wrapper %}
+  <body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
+    {% block header %}
+      {% block main_header %}
+      <header class="main-header">
+        {% include '@components/logo.html.twig' %}
+        {% include '@components/navbar/navbar.html.twig' %}
+      </header>
+      {% endblock %}
+      {% block main_sidebar %}
+        {% include '@components/aside/aside.html.twig' %}
+      {% endblock %}
+    {% endblock %}
+    {% block content_wrapper %}
+    <div class="content-wrapper">
+      {% block fos_user_content %}
+        {% block content_header %}
+          {% include '@components/content_header.html.twig' with { 'title': title | default("") } %}
+        {% endblock %}
+        <section class="content">
+          {% block content_main %}{% endblock %}
+        </section>
+      {% endblock %}
+    </div>
+    {% endblock %}
+    {% block footer %}
+      <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+          Anything you want
+        </div>
+        <strong>Copyright &copy; 2017 <a href="http://www.andeoit.com" target="_blank">AndeoIT</a>.</strong>
+      </footer>
+    {% endblock %}
+    <div class="control-sidebar-bg"></div>
+  </div>
+  {% block javascripts %}
+    <script src="{{ asset('assets/vendor/AdminLTE/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/AdminLTE/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/AdminLTE/dist/js/app.min.js') }}"></script>
+  {% endblock %}
+  </body>
+{% endblock %}

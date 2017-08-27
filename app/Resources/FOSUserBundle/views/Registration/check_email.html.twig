@@ -1,0 +1,10 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block fos_user_content %}
+  <div class="callout callout-success">
+    <h4>Registro confirmado!</h4>
+    <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+  </div>
+{% endblock fos_user_content %}
